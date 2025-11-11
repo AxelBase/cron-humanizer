@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <title>AxelBase – Cron Expression Humanizer & Next Run Preview</title>
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../../_app/immutable/assets/0.B3mXUNFs.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BR-96o9d.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CrC9a_2A.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Cf5BIau_.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C7KyM9E5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/PYEYrDHK.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.Bw8jfpsw.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Blso4RA4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B75mQkmd.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CYvh1U7T.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.B9dHfQ_P.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DlZe4Usp.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/eLgScli5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CVLWHAc2.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B5Qh3ClH.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/10.CX1sKdd6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/3fW0FoUW.js"><!--jo8es1--><meta name="description" content="Master L, W, #, Sunday 0 vs 7, day-of-month vs day-of-week precedence, and system-specific behaviors in cron scheduling."/> <link rel="canonical" href="../../blog/posts/post7"/> <meta property="og:title" content="Advanced Cron Syntax &amp; Edge Cases • AxelBase"/> <meta property="og:description" content="Master L, W, #, Sunday 0 vs 7, day-of-month vs day-of-week precedence, and system-specific behaviors in cron scheduling."/> <meta property="og:url" content="../../blog/posts/post7"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:site" content="@MrAAndersen123"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta name="robots" content="index, follow"/> <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Advanced Cron Syntax & Edge Cases",
+      "description": "Master L, W, #, Sunday 0 vs 7, day-of-month vs day-of-week precedence, and system-specific behaviors in cron scheduling.",
+      "datePublished": "2025-11-12",
+      "author": { "@type": "Organization", "name": "AxelBase" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "{base}/blog/posts/post7" }
+    }
+  </script><!----><title>Advanced Cron Syntax &amp; Edge Cases • AxelBase</title>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><header class="navbar-sticky"><div class="navbar-brand-container"><a href="../../" aria-label="Home"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-logo"/></a> <a class="navbar-brand-text" href="../../">AxelBase</a> <div class="bmac-nav-item"><button class="bmac-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> Buy me a coffee</button> <!--[!--><!--]--></div></div> <nav><ul class="nav-links"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to-use">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul></nav></header> <main><!--[--><!----><div class="container fade-in post-layout"><div class="breadcrumbs"><a href="../../blog">Blog</a> <span>/</span> <p>Advanced Cron Syntax</p></div> <article class="prose"><h1>Advanced Cron Syntax &amp; Edge Cases</h1> <p class="post-meta">Published: 12 November 2025 • AxelBase</p> <p>Beyond <code>*</code> and <code>/</code>, cron supports powerful but inconsistent extensions.</p> <h2>Special Characters</h2> <ul><li><code>L</code> — Last day of month (<code>0 0 L * *</code>)</li> <li><code>W</code> — Nearest weekday (<code>0 9 15W * *</code>)</li> <li><code>#</code> — Nth weekday (<code>0 9 * * 5#3</code> = 3rd Friday)</li></ul> <h3>Warning</h3> <p>These are <strong>not standard</strong>. Supported in Quartz, not in Vixie cron.</p> <h2>Sunday: 0 or 7?</h2> <p>Both valid. Use <code>?</code> in the other day field to avoid conflicts.</p> <h3>Precedence Rules</h3> <p>If both day-of-month and day-of-week are specified:</p> <ul><li>Vixie cron: OR logic</li> <li>Quartz: AND logic (rare)</li></ul> <h2>Best Practice</h2> <p>Use <code>?</code> in one field to disable it. Never rely on non-standard extensions in production.</p> <p class="italic-note">Stick to standards. Avoid surprises.</p></article></div><!----><!--]--></main> <footer class="footer-fixed"><span>© AxelBase Cron Humanizer – 2025</span> <a href="../../privacy">Privacy</a> <a href="../../terms">Terms</a></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_s119r0 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/cron-humanizer"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BR-96o9d.js"),
+						import("../../_app/immutable/entry/app.Bw8jfpsw.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 10],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

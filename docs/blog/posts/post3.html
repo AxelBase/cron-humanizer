@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <title>AxelBase – Cron Expression Humanizer & Next Run Preview</title>
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../../_app/immutable/assets/0.B3mXUNFs.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BR-96o9d.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CrC9a_2A.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Cf5BIau_.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C7KyM9E5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/PYEYrDHK.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.Bw8jfpsw.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Blso4RA4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B75mQkmd.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CYvh1U7T.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.B9dHfQ_P.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DlZe4Usp.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/eLgScli5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CVLWHAc2.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B5Qh3ClH.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/6.h900gHGm.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/3fW0FoUW.js"><!--1al8b51--><meta name="description" content="50+ real-world cron examples: daily backups, hourly reports, weekly cleanup, monthly billing — with human-readable explanations."/> <link rel="canonical" href="../../blog/posts/post3"/> <meta property="og:title" content="Common Cron Patterns and Examples • AxelBase"/> <meta property="og:description" content="50+ real-world cron examples: daily backups, hourly reports, weekly cleanup, monthly billing — with human-readable explanations."/> <meta property="og:url" content="../../blog/posts/post3"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:site" content="@MrAAndersen123"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta name="robots" content="index, follow"/> <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Common Cron Patterns and Examples",
+      "description": "50+ real-world cron examples: daily backups, hourly reports, weekly cleanup, monthly billing — with human-readable explanations.",
+      "datePublished": "2025-11-12",
+      "author": { "@type": "Organization", "name": "AxelBase" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "{base}/blog/posts/post3" }
+    }
+  </script><!----><title>Common Cron Patterns and Examples • AxelBase</title>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><header class="navbar-sticky"><div class="navbar-brand-container"><a href="../../" aria-label="Home"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-logo"/></a> <a class="navbar-brand-text" href="../../">AxelBase</a> <div class="bmac-nav-item"><button class="bmac-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> Buy me a coffee</button> <!--[!--><!--]--></div></div> <nav><ul class="nav-links"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to-use">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul></nav></header> <main><!--[--><!----><div class="container fade-in post-layout"><div class="breadcrumbs"><a href="../../blog">Blog</a> <span>/</span> <p>Common Cron Patterns</p></div> <article class="prose"><h1>Common Cron Patterns and Examples</h1> <p class="post-meta">Published: 12 November 2025 • AxelBase</p> <p>Here are the most frequently used cron schedules — with plain English explanations.</p> <h2>Every Minute</h2> <ul><li><code>* * * * *</code> — Run continuously</li> <li><code>*/5 * * * *</code> — Every 5 minutes</li></ul> <h2>Hourly Jobs</h2> <ul> On the hour: <code>0 * * * *</code><br/> Half past: <code>30 * * * *</code><br/> Every 2 hours: <code>0 */2 * * *</code></ul> <h2>Daily Schedules</h2> <ul>Midnight: <code>0 0 * * *</code><br/> 9 AM: <code>0 9 * * *</code><br/> 10:30 PM: <code>30 22 * * *</code></ul> <h2>Weekly &amp; Monthly</h2> <ul>Monday 9 AM: <code>0 9 * * 1</code><br/> First of month: <code>0 0 1 * *</code><br/> Last Friday: <code>0 17 * * 5L</code> (system-dependent)</ul> <p class="italic-note">Copy, paste, schedule — done.</p></article></div><!----><!--]--></main> <footer class="footer-fixed"><span>© AxelBase Cron Humanizer – 2025</span> <a href="../../privacy">Privacy</a> <a href="../../terms">Terms</a></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_s119r0 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/cron-humanizer"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BR-96o9d.js"),
+						import("../../_app/immutable/entry/app.Bw8jfpsw.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 6],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

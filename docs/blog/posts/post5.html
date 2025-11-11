@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <title>AxelBase – Cron Expression Humanizer & Next Run Preview</title>
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../../_app/immutable/assets/0.B3mXUNFs.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BR-96o9d.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CrC9a_2A.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Cf5BIau_.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C7KyM9E5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/PYEYrDHK.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.Bw8jfpsw.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Blso4RA4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B75mQkmd.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CYvh1U7T.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.B9dHfQ_P.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DlZe4Usp.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/eLgScli5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CVLWHAc2.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B5Qh3ClH.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/8.CtNozeyx.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/3fW0FoUW.js"><!--1li990r--><meta name="description" content="Convert complex cron syntax into natural language: 'Every 15 minutes' or 'At 09:00 on weekdays' — improve readability and reduce errors."/> <link rel="canonical" href="../../blog/posts/post5"/> <meta property="og:title" content="Humanizing Cron Schedules • AxelBase"/> <meta property="og:description" content="Convert complex cron syntax into natural language: 'Every 15 minutes' or 'At 09:00 on weekdays' — improve readability and reduce errors."/> <meta property="og:url" content="../../blog/posts/post5"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:site" content="@MrAAndersen123"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta name="robots" content="index, follow"/> <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Humanizing Cron Schedules",
+      "description": "Convert complex cron syntax into natural language: 'Every 15 minutes' or 'At 09:00 on weekdays' — improve readability and reduce errors.",
+      "datePublished": "2025-11-12",
+      "author": { "@type": "Organization", "name": "AxelBase" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "{base}/blog/posts/post5" }
+    }
+  </script><!----><title>Humanizing Cron Schedules • AxelBase</title>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><header class="navbar-sticky"><div class="navbar-brand-container"><a href="../../" aria-label="Home"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-logo"/></a> <a class="navbar-brand-text" href="../../">AxelBase</a> <div class="bmac-nav-item"><button class="bmac-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> Buy me a coffee</button> <!--[!--><!--]--></div></div> <nav><ul class="nav-links"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to-use">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul></nav></header> <main><!--[--><!----><div class="container fade-in post-layout"><div class="breadcrumbs"><a href="../../blog">Blog</a> <span>/</span> <p>Humanizing Cron Schedules</p></div> <article class="prose"><h1>Humanizing Cron Schedules</h1> <p class="post-meta">Published: 12 November 2025 • AxelBase</p> <p>Cron syntax is powerful but cryptic. Humanizing it turns <code>0 9 * * 1-5</code> into “At 09:00, Monday through Friday.”</p> <h2>Why It Matters</h2> <ul><li>Reduces misconfiguration</li> <li>Improves team communication</li> <li>Enables non-technical review</li> <li>Builds user trust in scheduling tools</li></ul> <h3>Core Translation Rules</h3> <ul><li><code>* * * * *</code> → “Every minute”</li> <li><code>0 * * * *</code> → “Every hour on the hour”</li> <li><code>*/15 * * * *</code> → “Every 15 minutes”</li> <li><code>0 22 * * 5</code> → “At 22:00 on Friday”</li></ul> <h3>Advanced Patterns</h3> <ul><li><code>30 14 1 * *</code> → “At 14:30 on day 1 of every month”</li> <li><code>0 9-17 * * 1-5</code> → “Every hour from 09:00 to 17:00, Monday to Friday”</li></ul> <h2>Implementation Tips</h2> <p>Parse field-by-field. Use lookup tables for months and weekdays. Handle edge cases like “every day” vs “every day of month.”</p> <p class="italic-note">Speak human. Schedule machine.</p></article></div><!----><!--]--></main> <footer class="footer-fixed"><span>© AxelBase Cron Humanizer – 2025</span> <a href="../../privacy">Privacy</a> <a href="../../terms">Terms</a></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_s119r0 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/cron-humanizer"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BR-96o9d.js"),
+						import("../../_app/immutable/entry/app.Bw8jfpsw.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
