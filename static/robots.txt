@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://axelbase.github.io/cron-humanizer/sitemap.xml
+Sitemap: https://cron-humanizer.vercel.app/sitemap.xml
